@@ -1,0 +1,9 @@
+<div>
+  <h1>My Goals</h1>
+  <hr />
+  <ul>
+    <li *ngFor="let goal of goals; let i = index">
+      <h3>{{ goal.name }}</h3>
+      <button (click)="toggleDetails(i)">Show Details</button>
+      <app-goal-item  *ngIf="goal.showDescription" [description]= "goal.description"></app-goal-item>
+      <hr/>
