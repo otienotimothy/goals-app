@@ -1,4 +1,6 @@
-export const goals = [
+import { Goal } from "./goal";
+
+export const goals: Goal[] = [
   {
     id: 1,
     name: 'Watch finding Nemo',
