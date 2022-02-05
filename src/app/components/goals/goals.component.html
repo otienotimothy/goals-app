@@ -5,5 +5,5 @@
     <li *ngFor="let goal of goals; let i = index">
       <h3>{{ goal.name }}</h3>
       <app-button btnText="Details" (btnClick)="toggleDetails(i)"></app-button>
-      <app-goal-item  *ngIf="goal.showDescription" [description]= "goal.description"></app-goal-item>
+      <app-goal-item  *ngIf="goal.showDescription" [description]= "goal.description" (deleteGoal)="deleted(i)" ></app-goal-item>
       <hr/>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-goal-item',
@@ -7,8 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class GoalItemComponent implements OnInit {
   @Input() description!: string;
+  // @Output() onDelete = new EventEmitter()
+
+  @Output() deleteGoal = new EventEmitter();
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  onDelete(){
+    console.log(this.description);
+    this.deleteGoal.emit();
+  }
 }

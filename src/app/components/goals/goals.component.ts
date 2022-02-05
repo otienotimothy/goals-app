@@ -22,4 +22,8 @@ export class GoalsComponent implements OnInit {
     this.goals[index].showDescription = !this.goals[index].showDescription
   }
 
+  deleted(index: number){
+    this.goals.splice(index, 1)
+  }
+
 }
